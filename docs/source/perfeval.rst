@@ -22,10 +22,11 @@ Classification Performance
     It returns an integer matrix ``R`` of size ``(k, k)``, such that ``R(i, j) == countnz((gt .== i) & (pred .== j))``.
 
     **Examples:**
-
+    *gt and pred can not be of type Any{}.*
+    *gt and pred can not contain a class with value 0 when using confusmat.*
     .. code-block:: julia
 
-        julia> gt = [1, 1, 1, 2, 2, 2, 3, 3];
+        julia> gt = [1, 1, 1, 2, 2, 2, 3, 3]; 
 
         julia> pred = [1, 1, 2, 2, 2, 3, 3, 3];
 
